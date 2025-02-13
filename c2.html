@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Enter Item">
+    <input type="text" placeholder="Enter Price">
+    <button>OK</button>
+    <ol></ol>
+    <table border="1" width="50%" align="center" style="display: none;">
+        <tr>
+            <th>
+                Item
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Total
+            </th>
+        </tr>
+    </table>
+    
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('button').click(function(){
+            //     var inp = $('input').val(); // Get value from input field 
+            //     $('h1').text('Hy ' + inp); // Set value in h1 text
+            // })
+            // $('input').keyup(function(){
+            //     var inp = $('input').val(); // Get value from input field 
+            //     $('h1').text(inp); // Set value in h1 text
+            // })
+            // $('button').click(function(){
+            //     var item = $('input').eq(0).val();
+            //     var price = $('input').eq(1).val();
+            //     $('h1').text('Item : ' + item + ' Price : ' + price);
+            // })
+            var total = 0;
+            $('button').click(function(){
+                var item = $('input').eq(0).val();
+                var price = $('input').eq(1).val();
+                var cnvertInt = parseInt(price);  // parseInt means value convert in number
+                total = total + cnvertInt;
+                // $('ol').prepend('<li> Product : ' + item + ' Rs. : ' + price + '</li>');
+                // $('ol').append('<li> Product : ' + item + ' Rs. : ' + price + ' Total : ' + total + '</li>');
+                $('table').show();
+                $('table').append('<tr> <td>' + item + '</td> <td>' + price + '</td> <td>' + total + '</td> </tr>');
+            })
+
+        })
+    </script>
+</body>
+</html>

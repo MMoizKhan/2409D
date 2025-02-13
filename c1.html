@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="al" id="hide">Hide</button>
+    <button id="al">See more</button>
+    <button class="al" id="show">Show</button>
+
+    <h1>Welcome</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur numquam voluptatem laudantium. Ducimus quis fugit quibusdam nemo repellat sequi ipsum error hic. Officiis mollitia, minima atque itaque iure impedit eos?</p>
+    <div style="width: 100px; height: 100px; background-color: red;"></div>
+
+    <!-- Download Link -->
+    <!-- <script src="jquery.js"></script> -->
+
+    <!-- CDN Link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#al').click(function(){
+                // $('div').slideToggle('slow');
+                $('p').toggle('slow');
+            })
+        })
+    </script>
+</body>
+</html>
